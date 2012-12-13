@@ -5,3 +5,7 @@ class Post(models.Model):
 	post_date = models.DateTimeField(auto_now_add=True)
 	edit_date = models.DateTimeField(auto_now=True)
 	markdown = models.TextField()
+	public = models.BooleanField()
+
+	def __unicode__(self):
+		return self.title;
