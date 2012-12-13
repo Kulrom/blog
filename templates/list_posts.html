@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}List all posts{% endblock %}
+{% block content %}
+	{% for post in posts %}
+	<div class="blog_post">
+		<h2><a href="/post/{{ post.slug }}/" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<h3>Posted on {{ post.post_date }} by Jonny</h3>
+		<p>{{ post.markdown|truncatewords_html:50 }}</p>
+		<p class="read_more"><a href="/post/{{ post.slug }}/" title="{{ post.title }}">Read more...</a></p>
+	</div>
+	{% endfor %}
+{% endblock %}

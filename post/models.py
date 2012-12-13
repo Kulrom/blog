@@ -6,6 +6,7 @@ class Post(models.Model):
 	edit_date = models.DateTimeField(auto_now=True)
 	markdown = models.TextField()
 	public = models.BooleanField()
+	slug = models.SlugField(unique=True, default='abc')
 
 	def __unicode__(self):
 		return self.title;
