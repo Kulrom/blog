@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
-{{ post.markdown }}
+<div id="content">
+	<h1>{{ post.title }}</h1>
+	<div id="post_content">
+		{{ post.markdown }}
+	</div>	
+</div>
 {% endblock %}

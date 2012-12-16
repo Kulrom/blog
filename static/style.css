@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Signika);
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Signika', sans-serif;
+}
+
+div#nav {
+	float: left;
+	width: 300px;
+	border-right: 1px solid #000;
+	margin: 20px;
+}
+
+div#content {
+	float: left;
+	width: 600px;
+	padding-left: 10px;
+}
+
+div#content h2 {
+	margin-bottom: 0;
+	font-size: 150%;
+}
+
+div#content h2 a {
+	color: #000;
+	text-decoration: none;
+}
+
+div#content h2 a:hover {
+	text-decoration: underline;
+}
+
+div#content h3 {
+	font-size: 110%;
+	font-weight: normal;
+	color: #BBB;
+	margin:0;
+	padding: 0;
+}
+
+div#content p {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-left: 15px;
+}
+
+div#content p.read_more {
+	margin-top: 10px;
+	padding-left: 0;
+}
