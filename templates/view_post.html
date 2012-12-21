@@ -5,6 +5,12 @@
 	<h1>{{ post.title }}</h1>
 	<div id="post_content">
 		{{ post.markdown }}
-	</div>	
+	</div>
+    {% if previous_post %}
+    <p><a href="/post/{{ previous_post.slug }}/" title="{{ previous_post.title }}">« {{ previous_post.title }}</a></p>
+    {% endif %}
+    {% if next_post %}
+    <p><a href="/post/{{ next_post.slug }}/" title="{{ next_post.title }}">{{ next_post.title }} »</a></p>
+    {% endif %}
 </div>
 {% endblock %}
