@@ -4,7 +4,9 @@
 <div id="content">
 	<h1>{{ post.title }}</h1>
 	<div id="post_content">
+        {% autoescape off %}
 		{{ post.markdown }}
+        {% endautoescape %}
 	</div>
     {% if previous_post %}
     <p><a href="/post/{{ previous_post.slug }}/" title="{{ previous_post.title }}">« {{ previous_post.title }}</a></p>
