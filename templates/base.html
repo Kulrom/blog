@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+        <meta charset="utf-8" />
 		<title>{% block title %}Blog{% endblock %}</title>
 		<link rel="stylesheet" type="text/css" href="/static/style.css" />
 	</head>
 	<body>
-		<div id="nav">
-			<h1><a href="/" title="Home">Blog software</a></h1>
-			<h2>Sub title</h2>
-			<ul>
-				<li><a href="#" title="">Somewhere</a></li>
-				<li><a href="#" title="">Somewhere</a></li>
-				<li><a href="#" title="">Somewhere</a></li>
-				<li><a href="#" title="">Somewhere</a></li>
-				<li><a href="#" title="">Somewhere</a></li>
-			</ul>
-		</div>
+        <nav>
+            <header>
+                <h1><a href="/" title="Home">Blog software</a></h1>
+                <h2>Sub title</h2>
+            </header>
+            <ul>
+                <li><a href="#" title="">Somewhere</a></li>
+                <li><a href="#" title="">Somewhere</a></li>
+                <li><a href="#" title="">Somewhere</a></li>
+                <li><a href="#" title="">Somewhere</a></li>
+                <li><a href="#" title="">Somewhere</a></li>
+            </ul>
+        </nav>
 		<div id="content">
 		{% block content %}
 		{% endblock %}
+            <footer>
+                <p>Jonathan Ford</p>
+            </footer>
 		</div>
 	</body>
 </html> 

@@ -9,14 +9,15 @@
 		<p class="read_more"><a href="/post/{{ post.slug }}/" title="{{ post.title }}">Read more...</a></p>
 	</div>
 	{% endfor %}
-    <p>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</p>
-    <p>
-    {% if posts.has_previous %}
-        <a href="/list/{{ posts.previous_page_number }}" name="Previous page">« Previous</a>
-    {% endif %}
-    &nbsp;
-    {% if posts.has_next %}
-        <a href="/list/{{ posts.next_page_number }}" name="Next page">Next »</a>
-    {% endif %}
-    </p>
+    <div id="paginator">
+        <p>
+        {% if posts.has_previous %}
+            <a href="/list/{{ posts.previous_page_number }}" name="Previous page">« Previous</a>
+        {% endif %}
+        <p>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</p>
+        {% if posts.has_next %}
+            <a href="/list/{{ posts.next_page_number }}" name="Next page">Next »</a>
+        {% endif %}
+        </p>
+    </div>
 {% endblock %}

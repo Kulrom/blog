@@ -6,15 +6,30 @@ body {
 	padding: 0;
 }
 
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
 h1, h2, h3 {
 	font-family: 'Signika', sans-serif;
 }
 
-div#nav {
+nav {
 	float: left;
 	width: 300px;
 	border-right: 1px solid #000;
 	margin: 20px;
+}
+
+nav h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav h1 a:hover {
+    text-decoration: underline
 }
 
 div#content {
@@ -54,4 +69,18 @@ div#content p {
 div#content p.read_more {
 	margin-top: 10px;
 	padding-left: 0;
+}
+
+div#paginator {
+    margin-top: 10px;
+}
+
+div#paginator p {
+    display: inline;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 0px;
+    border-top: 1px solid #000;
 }
